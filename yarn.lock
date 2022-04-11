@@ -1325,6 +1325,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap-icons@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "bootstrap-icons@npm:1.8.1"
+  checksum: 2151c0312d74dced74abc6ac14e69640e1af08e85224868bf2c0161b73ec9e0c1fda03e8585069c4164e2fb9633db881f8c2d812f11cfdbaf1139849c0d30e6a
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -4313,6 +4320,7 @@ __metadata:
     "@sveltejs/kit": next
     "@typescript-eslint/eslint-plugin": ^5.10.1
     "@typescript-eslint/parser": ^5.10.1
+    bootstrap-icons: ^1.8.1
     eslint: ^7.32.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-svelte3: ^3.2.1
