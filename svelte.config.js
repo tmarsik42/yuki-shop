@@ -6,9 +6,16 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: preprocess(),
-
 	kit: {
 		adapter: adapter()
+	},
+	vite: {
+		server: {
+			fs: {
+				strict: true,
+				allow: ['static']
+			}
+		}
 	}
 };
 
