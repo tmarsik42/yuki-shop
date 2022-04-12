@@ -1,17 +1,48 @@
 <style>
-	.horizontal-menu {
+	nav {
 		display: flex;
-		width: 50vw;
-		margin: 1rem auto 1.5rem auto;
-		justify-content: space-around;
+		position: sticky;
+		top: 0;
+		margin: 0 auto;
+		padding: 1rem 0 1.5rem 0;
+		justify-content: center;
 		align-items: center;
+		background-color: white;
+	}
+	nav > div {
+		padding: 0.625rem 0.75rem;
+		margin: 0 0.25rem;
+		border-radius: 24px;
+	}
+	nav > div:hover {
+		background-color: #ccc;
+		cursor: pointer;
+	}
+	nav > div > a {
+		text-decoration: none;
+		color: black;
 	}
 </style>
 
-<div class="horizontal-menu">
-	<div>Jarní kolekce</div>
-	<div>Sukně</div>
-	<div>Miunčiny ponožky</div>
-	<div>Doplňky</div>
-	<div>Příběhy</div>
-</div>
+<nav>
+	<div>
+		<a href="#">
+			CLOTHING
+		</a>
+	</div>
+	<div>
+		<a href="#">
+			ACCESSORIES
+		</a>
+	</div>
+	<div>
+		<a href="#">
+			ORIGINAL PRINT COLLECTION
+		</a>
+	</div>
+	<div>
+		<a href="#">
+			BLOG
+		</a>
+	</div>
+</nav>

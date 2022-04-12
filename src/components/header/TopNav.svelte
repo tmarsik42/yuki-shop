@@ -8,9 +8,9 @@
 
 <div class="top-nav">
 	<div>
-		<span>
+		<span style="font-size: 0.8em;">
 			<i class="bi bi-envelope"></i>
-			example@example.com
+			sleepingdollyuki@gmail.com
 		</span>
 	</div>
 	<div>

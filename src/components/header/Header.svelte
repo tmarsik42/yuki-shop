@@ -10,11 +10,16 @@
 </script>
 
 <style>
+	header {
+		padding: 0.5rem;
+		background-color: white;
+	}
 	.header-lace {
 		height: 2rem;
 		width: 100vw;
 		display: block;
-		position: absolute;
+		position: sticky;
+		top: 4rem;
 		background-image: url("/krajkaborder.png");
 		transform: rotate(180deg);
 		background-size: contain;
@@ -22,9 +27,11 @@
 	}
 </style>
 
-<div class="header" bind:clientHeight="{headerHeight}">
+<header bind:clientHeight="{headerHeight}">
 	<TopNav />
 	<Banner />
-	<HorizontalMenu />
-</div>
+</header>
+
+<HorizontalMenu />
+
 <div class="header-lace">&nbsp;</div>

@@ -9,4 +9,6 @@
 
 <Header />
 
-<slot />
+<main>
+	<slot />
+</main>
