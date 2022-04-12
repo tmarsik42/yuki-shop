@@ -2,7 +2,7 @@
 	.horizontal-menu {
 		display: flex;
 		width: 50vw;
-		margin: 0 auto;
+		margin: 1rem auto 1.5rem auto;
 		justify-content: space-around;
 		align-items: center;
 	}
