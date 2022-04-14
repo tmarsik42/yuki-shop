@@ -1,3 +1,3 @@
-import { writable } from 'svelte/store';
+import {writable} from "svelte/store";
 
-export const headerHeightStore = writable<number>(0);
+export const headerHeightStore = writable<number>(0)

@@ -1,11 +1,14 @@
 <script lang="ts">
-	import { headerHeightStore } from '../stores/headerHeight';
+
+import Skirts from "../components/product/Skirts.svelte";
 </script>
 
 <style>
-	.content {
-		min-height: 200vh;
-	}
+    .content {
+        padding: 1rem;
+    }
 </style>
 
-<div class="content" style="--headerHeight: {$headerHeightStore}px">&nbsp;</div>
+<div class="content">
+    <Skirts />
+</div>
