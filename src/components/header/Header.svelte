@@ -2,11 +2,6 @@
 	import TopNav from './TopNav.svelte';
 	import Banner from './Banner.svelte';
 	import HorizontalMenu from './HorizontalMenu.svelte';
-	import { headerHeightStore } from '../../stores/headerHeight';
-
-	export let headerHeight;
-
-	$: headerHeightStore.set(headerHeight);
 </script>
 
 <style>
@@ -20,14 +15,14 @@
 		display: block;
 		position: sticky;
 		top: 4rem;
-		background-image: url("/krajkaborder.png");
+		background-image: url('/krajkaborder.png');
 		transform: rotate(180deg);
 		background-size: contain;
 		background-position: center bottom;
 	}
 </style>
 
-<header bind:clientHeight="{headerHeight}">
+<header>
 	<TopNav />
 	<Banner />
 </header>

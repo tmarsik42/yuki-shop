@@ -1,8 +1,22 @@
+<script>
+	import { cartContents } from '../../stores/cart';
+
+	let qty = 0;
+
+	$: if ($cartContents?.length) {
+		qty = $cartContents.reduce((p, c) => p + c.quantity, 0);
+	}
+</script>
+
 <style>
 	.top-nav {
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+	}
+	a {
+		text-decoration: none;
+		color: black;
 	}
 </style>
 
@@ -14,11 +28,9 @@
 		</span>
 	</div>
 	<div>
-		<span>
-			<i class="bi bi-search"></i>
-		</span>
-		<span>
-			<i class="bi bi-bag-heart"></i>
-		</span>
+		<a href="/order/cart">
+			<i class="bi bi-bag-heart" style="font-size: 1.5em;"></i>
+			{qty}
+		</a>
 	</div>
 </div>

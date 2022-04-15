@@ -1,3 +1,7 @@
+<script>
+	import { getMenuItems } from './menuItems';
+</script>
+
 <style>
 	nav {
 		display: flex;
@@ -9,40 +13,34 @@
 		align-items: center;
 		background-color: white;
 	}
-	nav > div {
+	nav > a > div {
 		padding: 0.625rem 0.75rem;
 		margin: 0 0.25rem;
+	}
+	nav > a:hover {
+		text-decoration: underline;
+		cursor: pointer;
 		border-radius: 24px;
 	}
-	nav > div:hover {
-		background-color: #ccc;
-		cursor: pointer;
-	}
-	nav > div > a {
+	nav > a {
 		text-decoration: none;
 		color: black;
+	}
+	nav span {
+		vertical-align: middle;
 	}
 </style>
 
 <nav>
-	<div>
-		<a href="#">
-			CLOTHING
+	{#each getMenuItems() as menuItem (menuItem.id)}
+		<a href="{menuItem.url}">
+			<div>
+				<span>{menuItem.name}</span>
+				{#if menuItem.name === 'BLOG'}
+					&nbsp;
+					<i class="bi bi-box-arrow-up-right"></i>
+				{/if}
+			</div>
 		</a>
-	</div>
-	<div>
-		<a href="#">
-			ACCESSORIES
-		</a>
-	</div>
-	<div>
-		<a href="#">
-			ORIGINAL PRINT COLLECTION
-		</a>
-	</div>
-	<div>
-		<a href="#">
-			BLOG
-		</a>
-	</div>
+	{/each}
 </nav>
