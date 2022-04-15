@@ -1,14 +1,13 @@
 <script lang="ts">
-
-import Skirts from "../components/product/Skirts.svelte";
+	import Gallery from '../components/product/Gallery.svelte';
 </script>
 
 <style>
-    .content {
-        padding: 1rem;
-    }
+	.content {
+		padding: 1rem;
+	}
 </style>
 
 <div class="content">
-    <Skirts />
+	<Gallery category="all" />
 </div>
