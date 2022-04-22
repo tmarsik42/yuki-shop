@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import static_adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,12 +8,15 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter({
+		adapter: static_adapter({
 			// default options are shown
 			pages: 'docs',
 			assets: 'docs',
 			fallback: null
-		})
+		}),
+		prerender: {
+			default: true
+		}
 	}
 };
 

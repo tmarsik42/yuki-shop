@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.3",
   "scripts": {
-    "deploy": "npm run build && npx gh-pages -d build",
+    "deploy": "npm run build && npx gh-pages -d .svelte-kit/static/build -t true",
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "rm -rf build && svelte-kit build && touch .svelte-kit/static/build/.nojekyll",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
