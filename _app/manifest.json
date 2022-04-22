@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-7dde15e7.js",
+    "file": "start-3499aa49.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -69,7 +69,7 @@
       "_index-2a11c2ea.js"
     ],
     "css": [
-      "assets/pages/original-print-collection/index.svelte-9523c98d.css"
+      "assets/pages/clothing/index.svelte-8b18b940.css"
     ]
   },
   "src/routes/clothing/index.svelte": {
@@ -84,7 +84,7 @@
       "_index-2a11c2ea.js"
     ],
     "css": [
-      "assets/pages/original-print-collection/index.svelte-9523c98d.css"
+      "assets/pages/clothing/index.svelte-8b18b940.css"
     ]
   },
   "src/routes/index.svelte": {
@@ -99,7 +99,7 @@
       "_index-2a11c2ea.js"
     ],
     "css": [
-      "assets/pages/original-print-collection/index.svelte-9523c98d.css"
+      "assets/pages/clothing/index.svelte-8b18b940.css"
     ]
   },
   "src/routes/order/cart.svelte": {
@@ -125,7 +125,7 @@
       "_index-2a11c2ea.js"
     ],
     "css": [
-      "assets/pages/original-print-collection/index.svelte-9523c98d.css"
+      "assets/pages/clothing/index.svelte-8b18b940.css"
     ]
   },
   "_index-24028e44.js": {
