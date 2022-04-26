@@ -27,7 +27,7 @@
                                   Cena za ks: ${item.price}\n`
 					})),
 					footer: {
-						text: `Cena celkem: ${getTotalPrice}`
+						text: `Cena celkem: ${$getTotalPrice}`
 					}
 				}
 			]
