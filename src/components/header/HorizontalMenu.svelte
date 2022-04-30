@@ -37,7 +37,6 @@
 			<div>
 				<span>{menuItem.name}</span>
 				{#if menuItem.name === 'BLOG'}
-					&nbsp;
 					<i class="bi bi-box-arrow-up-right"></i>
 				{/if}
 			</div>
