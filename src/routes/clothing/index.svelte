@@ -12,5 +12,5 @@
 </style>
 
 <div class="content">
-	<Gallery category="{categories}" />
+	<Gallery category="{Array.from(categories.keys())}" />
 </div>
