@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Gallery from '../components/product/Gallery.svelte';
+	//
 </script>
 
 <style>
@@ -9,5 +9,5 @@
 </style>
 
 <div class="content">
-	<Gallery category="all" />
+	<!-- TODO homepage -->
 </div>
