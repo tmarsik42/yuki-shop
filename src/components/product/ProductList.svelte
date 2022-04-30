@@ -23,11 +23,13 @@
 	}
 </style>
 
-<h1 style="text-transform: capitalize">
-	{categoryName}
-</h1>
-<div class="product-list">
-	{#each items ?? [] as item (item.id)}
-		<Item item="{item}" />
-	{/each}
-</div>
+{#if items?.length}
+	<h1 style="text-transform: capitalize">
+		{categoryName}
+	</h1>
+	<div class="product-list">
+		{#each items ?? [] as item (item.id)}
+			<Item item="{item}" />
+		{/each}
+	</div>
+{/if}

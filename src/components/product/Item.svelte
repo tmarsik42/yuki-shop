@@ -40,13 +40,16 @@
 		background-color: white;
 		padding: 0.75rem;
 	}
+	.image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.item-image {
-		width: 100%;
-		height: 80%;
+		width: 60%;
 	}
 	.item-image > img {
 		width: 100%;
-		height: 100%;
 		object-fit: cover;
 	}
 	.item-name {
@@ -58,16 +61,19 @@
 		font-size: 1.2em;
 		font-weight: bold;
 	}
+	.item-name > span:hover {
+		text-decoration: underline;
+	}
 
 	.item-info {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 0.5rem;
+		padding-top: 1rem;
 		height: 20%;
 	}
 	.item-plus-minus {
-		font-size: 1.5em;
+		font-size: 1.25em;
 		cursor: pointer;
 	}
 	a {
@@ -77,23 +83,25 @@
 </style>
 
 <div class="item-container">
-	<a href="#" class="item-image">
-		<img src="{item.imageUrl}" alt="{item.name}" />
-	</a>
+	<div class="image-container">
+		<a href="{item.category}/{item.id}" class="item-image">
+			<img src="{item.category}/{item.id}/full.jpeg" alt="{item.name}" />
+		</a>
+	</div>
 	<div class="item-info">
-		<a href="#">
+		<a href="{item.category}/{item.id}">
 			<div class="item-name">
 				<span>{item.name}</span>
 			</div>
 		</a>
 		<div class="item-plus-minus">
-			<span on:click="{() => changeQty(item, -1)}">
+			<span on:click="{() => changeQty(item, -1)}" title="odebrat z košíku ☹️">
 				<i class="bi bi-bag-dash"></i>
 			</span>
-			<span style="font-size: 1em;">
+			<span style="font-size: 0.75em;">
 				{qty}
 			</span>
-			<span on:click="{() => changeQty(item, 1)}">
+			<span on:click="{() => changeQty(item, 1)}" title="přidat do košíku 🙂">
 				<i class="bi bi-bag-plus"></i>
 			</span>
 		</div>
