@@ -61,30 +61,68 @@
 
 	.item-container {
 		padding: 2rem;
-		display: flex;
 	}
 
 	.item {
-		width: 65vw;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 
-	.item > .description {
+	.item-container > .description {
 		padding: 1.5rem;
 		border-radius: 8px;
 		background-color: white;
 		margin-bottom: 0;
 	}
 
-	.item-container > .actions {
+	.item > .info {
 		margin: 0 1.5rem;
 		border-radius: 8px;
-		background-color: white;
 		width: 35vw;
+		background-color: white;
+	}
+
+	.price-stock {
+		display: flex;
+		justify-content: space-between;
 	}
 </style>
 
 <div class="item-container">
 	<div class="item">
+		<div class="info">
+			<h1>{item.name}</h1>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum erat nulla, ullamcorper
+				nec, rutrum non, nonummy ac, erat.
+			</p>
+
+			<div class="size">
+				<label for="size">Size:</label>
+				<select name="size" id="size">
+					<option value="s">S</option>
+					<option value="m">M</option>
+					<option value="l">L</option>
+					<option value="xl">XL</option>
+				</select>
+			</div>
+
+			<div class="price-stock">
+				<span style="color: mediumpurple;">{item.price}&nbsp;Kč</span>
+				<!-- TODO items in stock-->
+				<span style="font-weight: bold; color: green;">
+					skladem&nbsp;
+					<span style="font-weight: bold; color: black;">(3ks)</span>
+				</span>
+			</div>
+
+			<div>
+				<i class="bi bi-bag-plus"></i>
+				&nbsp; Add to cart
+			</div>
+		</div>
 		<div class="swipe-container">
 			<Swipe {...swipeConfig} bind:this="{swipeComp}">
 				<SwipeItem>
@@ -103,21 +141,11 @@
 				{'>'}
 			</div>
 		</div>
-		<p class="description">
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum erat nulla, ullamcorper
-			nec, rutrum non, nonummy ac, erat. Nulla accumsan, elit sit amet varius semper, nulla mauris
-			mollis quam, tempor suscipit diam nulla vel leo. Maecenas libero. Aliquam ornare wisi eu
-			metus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
-		</p>
 	</div>
-	<div class="actions">
-		<label for="size">Size:</label>
-		<select name="size" id="size">
-			<option value="s">S</option>
-			<option value="m">M</option>
-			<option value="l">L</option>
-			<option value="xl">XL</option>
-		</select>
-		<div><i class="bi bi-bag-plus"></i> Add to cart</div>
-	</div>
+	<p class="description">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum erat nulla, ullamcorper
+		nec, rutrum non, nonummy ac, erat. Nulla accumsan, elit sit amet varius semper, nulla mauris
+		mollis quam, tempor suscipit diam nulla vel leo. Maecenas libero. Aliquam ornare wisi eu metus.
+		Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+	</p>
 </div>
